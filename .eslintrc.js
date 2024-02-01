@@ -23,7 +23,10 @@ module.exports = {
   rules: {
     indent: ["error", 4],
     semi: [2, "always"],
-    "space-before-function-paren": ["error", "never"],
-    quotes: ["error", "double", { allowTemplateLiterals: true }]
+    "space-before-function-paren": ["error", { anonymous: "always", named: "never" }],
+    quotes: ["error", "double", { allowTemplateLiterals: true }],
+    "eol-last": 0,
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+
   }
 };
